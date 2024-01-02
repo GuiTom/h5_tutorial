@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>css属性</title>
+    </head>
+<body>
+<ul>
+    块级元素与内联元素
+    <li>为块级(block)元素:宽高可以由width和height强制指定的元素为块级(block)元素，块级元素的尺寸可以由width、height或其子节点决定，前后会自动换行</li>
+    <li>内联(inline)元素:宽高不能由width和height强制指定的元素为内联(inline)元素，内联元素的大小只有其的子节点决定,内联元素前后不会自动换行</li>
+    <li>内联块级元素(inline-block):可以由width和height强制设置大小，但是前后不会自动换行</li>
+</ul>
+
+<ul>决定位置和大小的属性
+    <li>
+        
+        <ul>
+            position
+            <li>
+                static 默认属性 没有脱离文档流 position为static的块级元素被称为未定位的元素，不为static的块级元素被称为已定位的元素
+                <p style="color:red;">
+                    静态时，top和margin-top、left和margin-left等属性值无效
+                </p>
+            </li>
+            <li>
+                relative 相对定位，没有脱离文档流
+                <p style="color:red;">
+                    相对定位时，top和margin-top、left和margin-left等属性值取较大者生效
+                </p>
+            </li>
+            <li>
+                absolute 绝对定位, 其top、left、right、bottom,margin属性如果不是auto,就是相对于最近的已定位的元素的定位,脱离了文档流 绝对定位的元素都是块级元素(display:block;)
+                是auto的情况下，坐标还是在原来文档流中的左边，但是已经不占据文档流的空间了
+                <p style="color:red;">
+                    绝对定位时，top和margin-top、left和margin-left等属性值效果叠加
+                </p>
+            </li>
+            <li>fixed</li> 绝对定位，其top、left、right、bottom,margin属性如果不是auto,就是相对于浏览器窗体定位，脱离了文档流 绝对定位的元素都是块级元素(display:block;)
+            <p style="color:red;">
+                绝对定位时，top和margin-top、left和margin-left等属性值效果叠加
+            </p>
+            <li>sticky</li> 吸附式定位，用在内容划出某个区域时需要将菜单固定在边沿的情况。
+        
+        </ul>
+    </li>
+    <li>display
+        <ul>
+            <li>
+                inline 内联元素，宽高根据内容决定，设置width height为具体的尺寸是无效的 前后不会自动换行
+            </li>
+            <li>block  块级元素，宽高可以由width、height设置为具体的元素 前后自动换行</li>
+            <li>inline-block 内联块级元素 块级元素，宽高可以由width、height设置为具体的元素 前后自动换行 并且前后不会自动换行</li>
+            <li>flex、grid、flow等是控制内部子节点如何排列</li>
+        </ul>
+    </li>
+    <li>text-align</li>
+    <li>width、height</li>
+    <li>margin、padding</li>
+    <li>left right top bottom</li>
+</ul>
+<ul>颜色、字体、轮廓 字体装饰
+    <li>color</li>
+    <li>font-size、font-weight</li>
+    <li>border border-radius</li>
+    <li>text-decoration</li>
+</body>
+</html>
