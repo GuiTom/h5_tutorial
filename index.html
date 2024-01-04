@@ -7,8 +7,8 @@
 <body>
 <div class="container">
     <div class="menu">
-        <ul>
-            <li target="chapter0">前言</li>
+        <ul style="cursor:default;">
+            <li target="chapter0" style="color:blue;"> 前言</li>
             <li target="chapter1">标签分类</li>
             <li target="chapter2">文档流</li>
             <li target="chapter3">css属性</li>
@@ -46,6 +46,14 @@
    ulElement.addEventListener('click',(event)=>{
         let target = event.target.getAttribute('target');
         document.querySelector('#content').src= 'chapter/'+target+'.html';
+        let length = ulElement.children.length;
+        for(let i=0;i<length;i++){
+            if(ulElement.children[i]!=event.target){
+                ulElement.children[i].style.color = 'black';
+            }else {
+                ulElement.children[i].style.color = 'blue';
+            }
+        }
    });
 </script>
 </body>
