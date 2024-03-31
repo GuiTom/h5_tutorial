@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>显示HTML和CSS代码</title>  
+    <style>  
+        .code-container {  
+            border: 1px solid #ccc;  
+            padding: 10px;  
+            background-color: #f4f4f4;  
+            margin-bottom: 10px;  
+        }  
+        .code-container pre {  
+            margin: 0;  
+            font-family: 'Courier New', Courier, monospace;  
+        }  
+    </style>  
+</head>  
+<body>  
+  
+<h1>显示HTML和CSS代码</h1>  
+  
+<div class="code-container" id="code-display"></div>  
+  
+<script>  
+    const code = `  
+        <!DOCTYPE html>  
+        <html lang="en">  
+        <head>  
+            <meta charset="UTF-8">  
+            <title>示例页面</title>  
+            <style>  
+                body {  
+                    background-color: lightblue;  
+                }  
+            </style>  
+        </head>  
+        <body>  
+            <h1>欢迎来到我的网站</h1>  
+        </body>  
+        </html>  
+    `;  
+      
+    const codeDisplay = document.getElementById('code-display');  
+    const preElement = document.createElement('pre');  
+    const codeElement = document.createElement('code');  
+    codeElement.textContent = code; // 设置文本内容，避免HTML解析  
+    preElement.appendChild(codeElement);  
+    codeDisplay.appendChild(preElement);  
+</script>  
+  
+</body>  
+</html>

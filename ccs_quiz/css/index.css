@@ -1,0 +1,83 @@
+body{
+    padding: 20px;
+}
+.answer{
+    margin-top: 30px;
+}
+.answer form {
+   
+    width: 300px;
+    margin: auto;
+    left: 0;
+}
+
+.radio-container {
+
+    display: flex;
+    /* 使用Flexbox来使按钮横向并排 */
+    justify-content: space-between;
+    /* 均匀分布按钮 */
+    align-items: center;
+    /* 垂直居中对齐按钮 */
+
+}
+
+/* 可选：为单选按钮添加一些样式 */
+.radio-container input[type="radio"] {
+    margin-right: -10px;
+    /* 单选按钮和标签之间的间距 */
+}
+.content_area{
+    position: absolute;
+    top:0;
+    width: 100%;
+}
+.content img{
+    width: 23vw;
+}
+.option_area{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.submit,.next_button,.pre_button{
+    margin-top: 30px;
+    text-align: center;
+}
+.chanageQuestionButton{
+    display: flex;
+    justify-content: space-evenly;
+}
+.submit_container{
+   margin-top: 30px;
+    text-align: center;
+}
+.submit {
+   
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: aquamarine;
+    border-radius: 15px;
+    border: 1px solid gray;
+    left: 0;
+    margin: auto;
+}
+.pre_button,.next_button {
+   
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: wheat;
+    border-radius: 15px;
+    border: 1px solid lightpink;
+    color: black;
+
+}
+.pre_button[disabled],.next_button[disabled] {
+ 
+    background-color: #eaeaea;
+    color: white;
+    border: 1px solid gray;
+}
