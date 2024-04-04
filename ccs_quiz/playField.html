@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>例子</title>
+    <link rel=stylesheet href="../node_modules/codemirror/lib/codemirror.css">
+    <script src="../node_modules/codemirror/lib/codemirror.js"></script>
+    <script src="../node_modules/codemirror/mode/xml/xml.js"></script>
+    <script src="../node_modules/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../node_modules/codemirror/mode/css/css.js"></script>
+    <script src="../node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../node_modules/codemirror/addon/edit/matchbrackets.js"></script>
+
+</head>
+
+<body>
+    <div class="option_area">
+        <button class="run_button">运行</button>
+    </div>
+    <textarea class="code"></textarea>
+    <iframe class="previewArea"></iframe>
+    <style>
+        .run_button{
+            background-color: blue;
+            border: none;
+        }
+        .code {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            border: 1px solid gray;
+        }
+
+        .previewArea {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            border-left: 1px solid gray;
+            border-top: none;
+        }
+    </style>
+    <script>
+        let key = window.location.href.split('=')[1]
+        let code = localStorage.getItem(key);
+        let codeArea = document.querySelector('.code');
+        let preViewArea = document.querySelector('.previewArea');
+        // codeArea.textContent = code;
+        preViewArea.contentDocument.body.innerHTML = code;
+    
+
+        var editor = CodeMirror.fromTextArea(codeArea, {
+            lineNumbers: true, // 显示行号
+            mode: "htmlmixed", // 使用HTML模式
+            theme: "default" // 使用默认主题，你也可以根据需要选择其他主题
+        });
+        editor.setValue(code)
+        document.querySelector('.run_button').addEventListener('click',function(event){
+           
+            preViewArea.contentDocument.body.innerHTML = editor.getValue();
+        })
+    </script>
+</body>
+
+</html>

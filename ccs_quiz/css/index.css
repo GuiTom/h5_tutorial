@@ -1,5 +1,6 @@
 body{
     padding: 20px;
+    position: relative;
 }
 .answer{
     margin-top: 30px;
@@ -28,18 +29,21 @@ body{
     /* 单选按钮和标签之间的间距 */
 }
 .content_area{
-    position: absolute;
+  
     top:0;
+   
     width: 100%;
 }
 .content img{
     width: 23vw;
 }
 .option_area{
-    position: absolute;
+  
     bottom: 0;
     width: 100%;
+    
     padding-bottom: 30px;
+    overflow-y: scroll;
 }
 .submit,.next_button,.pre_button{
     margin-top: 30px;
